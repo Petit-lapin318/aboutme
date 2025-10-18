@@ -33,6 +33,7 @@ body {
 }
 
 /* Боковая панель — СЛЕВА, 1/4 ширины */
+/* Боковая панель — прилипает к левому краю и не скроллится */
 .sidebar {
   flex: 1;
   max-width: 280px;
@@ -41,6 +42,10 @@ body {
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
+  position: sticky;   /* ← делает панель "липкой" */
+  top: 0;             /* ← прилипает к верху viewport */
+  height: fit-content; /* ← подстраивается под контент */
+  align-self: flex-start; /* ← важно для flex-контейнера */
 }
 
 /* Шапка панели — аватар сверху */
