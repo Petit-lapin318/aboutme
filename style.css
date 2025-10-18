@@ -26,26 +26,30 @@ body {
   z-index: 100;
 }
 
-/* Основной контейнер */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
+
 
 /* Боковая панель — СЛЕВА, 1/4 ширины */
 /* Боковая панель — прилипает к левому краю и не скроллится */
 .sidebar {
-  flex: 1;
-  max-width: 280px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
   background-color: #1e1e1e;
   color: #fff;
-  display: flex;
+  display: top;
   flex-direction: column;
   padding: 30px 20px;
-  position: sticky;   /* ← делает панель "липкой" */
-  top: 0;             /* ← прилипает к верху viewport */
-  height: fit-content; /* ← подстраивается под контент */
-  align-self: flex-start; /* ← важно для flex-контейнера */
+  overflow-y: auto; /* если контента много — будет скролл внутри панели */
+  z-index: 90;
+}
+
+.main-content {
+  margin-left: 280px; /* отступ = ширина панели */
+  padding: 60px 50px 40px;
+  background-color: #fff;
+  min-height: 100vh;
 }
 
 /* Шапка панели — аватар сверху */
