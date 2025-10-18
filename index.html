@@ -21,14 +21,21 @@
       </div>
 
       <!-- Место под оглавление (в будущем — ссылки на разделы) -->
-      <nav class="sidebar-nav">
-        <p class="nav-title">Навигация</p>
-        <ul>
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#skills">Навыки</a></li>
-          <li><a href="#projects">Проекты</a></li>
-        </ul>
-      </nav>
+     <!-- Навигация внизу панели -->
+<nav class="sidebar-nav">
+  <p class="nav-title">Навигация</p>
+  <ul>
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#skills">Навыки</a></li>
+    <li class="projects-toggle">Проекты ▼</li>
+    <ul class="projects-list" id="projectsList">
+      <li><a href="#project1">Интернет-магазин на Django</a></li>
+      <li><a href="#project2">Приложение для Bitrix24</a></li>
+      <li><a href="#project3">Telegram-бот с AI</a></li>
+      <li><a href="#project4">Gameify Life — RPG для жизни</a></li>
+    </ul>
+  </ul>
+</nav>
     </aside>
 
     <!-- Основной контент — СПРАВА -->
@@ -65,6 +72,49 @@
           • Telegram-бот с AI (в разработке)
         </p>
       </section>
+
+      <section id="projects" class="projects-section">
+  <h2>Проекты</h2>
+
+  <div class="project-card" id="project1">
+    <h3>Интернет-магазин на Django</h3>
+    <p>
+      Полноценный интернет-магазин с авторизацией, корзиной и админкой.
+      Реализован бэкенд на Django, фронтенд — на базовых HTML/CSS.
+      Использовалась PostgreSQL для хранения товаров и пользователей.
+      Проект создан в рамках учебного курса, но доработан мной для понимания архитектуры фреймворка.
+    </p>
+  </div>
+
+  <div class="project-card" id="project2">
+    <h3>Приложение для Bitrix24</h3>
+    <p>
+      Локальное приложение для CRM-системы Bitrix24.
+      Позволяет загружать список сделок, фильтровать по сумме и отображать в таблице.
+      Написано на чистом JavaScript с использованием официального SDK Bitrix24.
+      Установлено и работает на тестовом портале.
+    </p>
+  </div>
+
+  <div class="project-card" id="project3">
+    <h3>Telegram-бот с AI</h3>
+    <p>
+      Бот, который принимает текст от пользователя и отправляет его в AI-сервис
+      для анализа или генерации ответа. В планах — подключить LLM (например, через Ollama или OpenRouter).
+      Бэкенд на Python (FastAPI), запускается локально. Позже будет задеплоен в облако.
+    </p>
+  </div>
+
+  <div class="project-card" id="project4">
+    <h3>Gameify Life — RPG для жизни</h3>
+    <p>
+      Приложение, которое превращает реальную жизнь в видеоигру:
+      ежедневные задачи дают XP, долгосрочные цели — уровни.
+      В разработке: бэкенд на FastAPI + PostgreSQL, фронтенд на React.
+      Цель — научиться fullstack-разработке на реальном проекте.
+    </p>
+  </div>
+</section>
     </main>
   </div>
 
