@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Андрей Павлов — Fullstack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Кнопка темы — в правом верхнем углу -->
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+  <div class="container">
+    <!-- Боковая панель — СЛЕВА -->
+    <aside class="sidebar">
+      <!-- Шапка: аватар + ФИО -->
+      <div class="sidebar-header">
+        <img src="avatar.jpg" alt="Андрей Павлов" class="avatar">
+        <h3>Андрей Павлов</h3>
+        <p class="role">Fullstack Developer</p>
+      </div>
+
+      <!-- Место под оглавление (в будущем — ссылки на разделы) -->
+      <nav class="sidebar-nav">
+        <p class="nav-title">Навигация</p>
+        <ul>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#projects">Проекты</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Основной контент — СПРАВА -->
+    <main class="main-content">
+      <h1>Андрей Павлов</h1>
+      <p class="subtitle">Fullstack Developer</p>
+
+      <section id="about" class="about">
+        <h2>Обо мне</h2>
+        <p>
+          Выпускник ЧГУ по специальности «Информационная безопасность автоматизированных систем».
+          Долгое время изучал сетевые технологии и администрирование Linux.
+          Сейчас активно переквалифицируюсь в разработку — пишу на Python, изучаю React,
+          работаю с PostgreSQL и Git.
+        </p>
+      </section>
+
+      <section id="skills" class="skills">
+        <h2>Навыки</h2>
+        <ul>
+          <li>Python (FastAPI, Django)</li>
+          <li>HTML / CSS / JavaScript</li>
+          <li>PostgreSQL</li>
+          <li>Linux / Сети (TCP/IP, HTTP)</li>
+          <li>Git / GitHub</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2>Проекты</h2>
+        <p>
+          • Интернет-магазин на Django<br>
+          • Приложение для Bitrix24<br>
+          • Telegram-бот с AI (в разработке)
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
